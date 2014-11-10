@@ -41,7 +41,9 @@ class DvtvEngine:
       return []
 
     def download(self, quality, movie):
-      video = next(x for x in self.playlist if get_key(x) == quality)
+      video = None
       if quality == None:
         video = next(x for x in self.playlist if x['default'] == True)
+      else:
+        video = next(x for x in self.playlist if get_key(x) == quality)
       return ('http', basename(self.url.rsplit('/')[-3]) + '.' + video['format'], { 'url': video['url'] })
