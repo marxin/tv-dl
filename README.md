@@ -8,6 +8,7 @@ Závislosti
 
 * Python >= 3.2
 * rtmpdump (http://rtmpdump.mplayerhq.hu/)
+* pyquery (https://pypi.python.org/pypi/pyquery)
 
 Podporované archivy
 -------------------
