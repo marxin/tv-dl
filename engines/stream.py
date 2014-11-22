@@ -22,6 +22,7 @@ class StreamEngine:
     def __init__(self, url):
         self.url = url
         self.page = urlopen(url).read().decode('utf-8')
+        self.playlist = []
         self.get_playlist()
 
         if len(self.playlist) == 0:
@@ -29,9 +30,12 @@ class StreamEngine:
 
     def get_playlist(self):
       pq = PyQuery(self.page)
-      l = next(filter(lambda x: x.startswith('Stream.Data.Episode.PRELOADED'), pq('script').map(lambda i, e: PyQuery(e).text())))
-      l = re.sub('\);$', '', re.sub('^[^\(]+\(', '', l))
-      data = json.loads(l)
+      l = list(filter(lambda x: x.startswith('Stream.Data.Episode.PRELOADED'), pq('script').map(lambda i, e: PyQuery(e).text())))
+      if len(l) == 0:
+        return
+      content = l[0]
+      content = re.sub('\);$', '', re.sub('^[^\(]+\(', '', content))
+      data = json.loads(content)
       self.name = data['episode_url']
 
       self.playlist = []
