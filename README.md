@@ -19,6 +19,7 @@ Podporované archivy
 * TV Barrandov Archív (http://barrandov.tv/video)
 * TV Prima Videoarchiv (http://www.iprima.cz/videoarchiv/)
 * DVTV (http://video.aktualne.cz/)
+* stream.cz (http://www.stream.cz/)
 
 Použití
 -------
