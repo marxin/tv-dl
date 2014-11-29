@@ -18,6 +18,7 @@ Podporované archivy
 * Show Jana Krause (http://www.iprima.cz/showjanakrause/videoarchiv)
 * TV Barrandov Archív (http://barrandov.tv/video)
 * TV Prima Videoarchiv (http://www.iprima.cz/videoarchiv/)
+* DVTV (http://video.aktualne.cz/)
 
 Použití
 -------
